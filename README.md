@@ -16,19 +16,21 @@
 - read_xbit
 - write_xbit
 - safe_write_xbit
-where x can be 8,10,12,16 or 24.
+(where x can be 8,10,12,16 or 24.)
 
 ## 8 BIT pinmap:
-- PINS	 - PORT	 INT_BIT DATA_BIT
-  - 19	   - GPIO_6	    16	    0
-  - 18	   - GPIO_6	    17	    1
-  - 14	   - GPIO_6	    18	    2
-  - 15	   - GPIO_6	    19	    3
+|PINS|	PORT|	INT_BIT|DATA_BIT|
+|----|---------|-------|------|
+|19|	GPIO_6|	16|	0|
+|18|	GPIO_6|	17|	1|
+|14|	GPIO_6|	18|	2|
+|15|	GPIO_6|	19|	3|
 			
-  - 17	   - GPIO_6	    22	    4
-  - 16	   - GPIO_6	    23	    5
-  - 22	   - GPIO_6	    24	    6
-  - 23	   - GPIO_6	    25	    7
+|17|	GPIO_6|	22|	4|
+|16|	GPIO_6|	23|	5|
+|22|	GPIO_6|	24|	6|
+|23|	GPIO_6|	25|	7|
+
 
 ## 10 BIT pinmap: 
 - PINS	    PORT	 INT_BIT  DATA_BIT
