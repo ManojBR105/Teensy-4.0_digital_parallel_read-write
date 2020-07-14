@@ -1,8 +1,8 @@
 # Parallel Digital READ/WRITE
- This Repository consists of functions to read and write data to multiple pins with high speed on Teensy4.0 with the help of port manipulation.
- It uses only breadboard friendly pins(0-23) and has been optimised to consume less time as much as possible.
- The pins are optimised to take less memory and execution and should not be changed.
-(*changing pins requires lot of changes in the code.)
+ This Repository consists of functions to read and write data to multiple pins with high speed on Teensy4.0 with the help of port manipulation.<br/>
+ It uses only breadboard friendly pins(0-23) and has been optimised to consume less time as much as possible.<br/>
+ The pins are optimised to take less memory and execution and should not be changed.<br/>
+(*changing pins requires lot of changes in the code.)<br/>
 
 ## There are 5 options for number of bits.
 - 8 BIT
@@ -15,7 +15,7 @@
 - set_xbit
 - read_xbit
 - write_xbit
-- safe_write_xbit
+- safe_write_xbit<br/>
 (where x can be 8,10,12,16 or 24.)
 
 ## 8 BIT pinmap:
@@ -126,8 +126,8 @@
 
 ## Setting pins :
 ### set_xbit(mode);
-x is no of bits and can be 8,10,12,16,24.
-mode can be INPUT, INPUT_PULLUP, INPUT_PULLDOWN, OUTPUT....
+x is no of bits and can be 8,10,12,16,24.<br/>
+mode can be INPUT, INPUT_PULLUP, INPUT_PULLDOWN, OUTPUT....<br/>
 this functions sets the pin as input/output it uses the usual pinMode() function with a for loop to set the pins.
 
 ## Reading data :
@@ -142,17 +142,17 @@ it returns the value of the data read on the pins as an unsigned integer of suit
 |    16    |     uint16_t       |     2     |26~27ns|
 |    24    |     uint32_t       |     3     | 40ns|
 
-you can see that no of ports affects the speed so using less no of ports is recommonded. 
+you can see that number of ports affects the speed so using less no of ports is recommonded.<br/> 
 *16-bit and and 24-bit can be reduced to 14ns and 27ns by using pins on the backside of the board(24,25,26,27 to be specific).
 
 
 ## Writing data:
-#### write_xbit(data);
-x is no of bits and can be 8,10,12,16,24.
-data is the parameter to be written on the data line.
+### write_xbit(data);
+x is no of bits and can be 8,10,12,16,24.<br/>
+data is the parameter to be written on the data line.<br/>
 This mode is faster compared to safe_write() but this method might affect other pins on the port if not managed properly.
 
-|No_of_bits|parameter_type|No_of_ports|Speed|pins_might_get_affected|
+|No_of_bits|parameter_type|No_of_ports|Speed|Pins_that_might_get_affected|
 |:--------:|:------------:|:---------:|:---:|:---------------------:|
 |    8     |   uint8_t    |     1     | 3ns | 0,1,20,21,24,25,26,27 |
 |    10    |   uint16_t   |     1     | 3ns | 0,1,24,25,26,27       |
@@ -160,10 +160,10 @@ This mode is faster compared to safe_write() but this method might affect other 
 |    16    |   uint16_t   |     2     |6~7ns| 24,25,26,27,6,7,8,9,32|
 |    24    |   uint32_t   |     3     | 10ns| 24,25,26,27,29,32,33  |
 
-Again no_of_ports affects the speed. Speed of 16-bit and 24-bit speed can be improved to 3ns and 7ns by using pins on the backside of the board(24,25,26,27 to be specific).
+Again number of ports affects the speed. Speed of 16-bit and 24-bit speed can be improved to 3ns and 7ns by using pins on the backside of the board(24,25,26,27 to be specific).
 
-#### safe_write_xbit(data);
-This method is same as write but it doesn't affect other pins. 
+### safe_write_xbit(data);
+This method is same as write but it doesn't affect other pins.<br/> 
 But it does it at the cost of the speed. 
  |No_of_bits|Speed|
  |:--------:|:---:|
@@ -173,5 +173,5 @@ But it does it at the cost of the speed.
  |    16    | 43ns|
  |    24    | 70ns|
  
-Once again Speed of 16-bit and 24-bit speed can be improved to 23ns and 43ns by using pins on the backside of the board(24,25,26,27 to be specific).
-*The speed is calculated by executing the instruction 1000 times and measuring the time taken It might not be accurate. I would like to see if anyone can probe the pins with oscilloscope and measure the speed,
+Once again Speed of 16-bit and 24-bit speed can be improved to 23ns and 43ns by using pins on the backside of the board(24,25,26,27 to be specific).<br/>
+*The speed is calculated by executing the instruction 1000 times and measuring the time taken It might not be accurate. I would like to see if anyone can probe the pins with oscilloscope and measure the speed.
