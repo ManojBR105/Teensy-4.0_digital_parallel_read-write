@@ -4,62 +4,62 @@
  The pins are optimised to take less memory and execution and should not be changed.
 (*changing pins requires lot of changes in the code.)
 
-There are 5 options for number of bits.
--8 BIT
--10 BIT
--12 BIT
--16 BIT
--24 BIT
+## There are 5 options for number of bits.
+- 8 BIT
+- 10 BIT
+- 12 BIT
+- 16 BIT
+- 24 BIT
 
-There are four operations for each option.
--set_xbit
--read_xbit
--write_xbit
--safe_write_xbit
-*where x can be 8,10,12,16 or 24.
+## There are four operations for each option.
+- set_xbit
+- read_xbit
+- write_xbit
+- safe_write_xbit
+* where x can be 8,10,12,16 or 24.
 
-8 BIT pinmap:
--PINS	    PORT	 INT_BIT DATA_BIT
--19	    GPIO_6	    16	    0
--18	    GPIO_6	    17	    1
--14	    GPIO_6	    18	    2
--15	    GPIO_6	    19	    3
+## 8 BIT pinmap:
+- PINS	    PORT	 INT_BIT DATA_BIT
+ - 19	    GPIO_6	    16	    0
+ - 18	    GPIO_6	    17	    1
+ - 14	    GPIO_6	    18	    2
+ - 15	    GPIO_6	    19	    3
 			
--17	    GPIO_6	    22	    4
--16	    GPIO_6	    23	    5
--22	    GPIO_6	    24	    6
--23	    GPIO_6	    25	    7
+ - 17	    GPIO_6	    22	    4
+ - 16	    GPIO_6	    23	    5
+ - 22	    GPIO_6	    24	    6
+ - 23	    GPIO_6	    25	    7
 
--10 BIT pinmap: 
+## 10 BIT pinmap: 
 -PINS	    PORT	 INT_BIT  DATA_BIT
--19	    GPIO_6	    16	    0
--18	    GPIO_6	    17	    1
--14  	    GPIO_6	    18	    2
--15	    GPIO_6	    19	    3
+ - 19	    GPIO_6	    16	    0
+ - 18	    GPIO_6	    17	    1
+ - 14  	  GPIO_6	    18	    2
+ - 15	    GPIO_6	    19	    3
 			
--17	    GPIO_6	    22      4
--16	    GPIO_6	    23	    5
--22	    GPIO_6	    24	    6
--23	    GPIO_6	    25	    7
--20	    GPIO_6	    26	    8
--21	    GPIO_6	    27	    9
+- 17	    GPIO_6	    22      4
+- 16	    GPIO_6	    23	    5
+- 22	    GPIO_6	    24	    6
+- 23	    GPIO_6	    25	    7
+- 20	    GPIO_6	    26	    8
+- 21	    GPIO_6	    27	    9
 
--12 BIT pinmap:
--PINS	    PORT	 INT_BIT  DATA_BIT
--19	    GPIO_6	    16	    0
--18	    GPIO_6  	    17	    1
--14  	    GPIO_6	    18	    2
--15	    GPIO_6	    19	    3
+## 12 BIT pinmap:
+- PINS	    PORT	 INT_BIT  DATA_BIT
+ - 19	    GPIO_6	    16	    0
+ - 18	    GPIO_6  	  17	    1
+ - 14  	  GPIO_6	    18	    2
+ - 15	    GPIO_6	    19	    3
 			
--17	    GPIO_6  	    22	    4
--16	    GPIO_6  	    23	    5
--22	    GPIO_6  	    24	    6
--23  	    GPIO_6	    25	    7
--20  	    GPIO_6	    26	    8
--21	    GPIO_6	    27	    9
+ - 17	    GPIO_6  	  22	    4
+ - 16	    GPIO_6  	  23	    5
+ - 22	    GPIO_6  	  24	    6
+ - 23  	  GPIO_6	    25	    7
+ - 20  	  GPIO_6	    26	    8
+ - 21	    GPIO_6	    27	    9
 			
--1	    GPIO_6  	    2	    10
--0	    GPIO_6	    3	    11
+ - 1	    GPIO_6  	  2	    10
+ - 0	    GPIO_6	    3	    11
 
 16 BIT pinmap:
 PINS	    PORT	 INT_BIT	DATA_BIT
