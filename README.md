@@ -19,7 +19,7 @@ There are four operations for each option.
 *where x can be 8,10,12,16 or 24.
 
 8 BIT pinmap:
-PINS	PORT	 INT_BIT DATA_BIT
+PINS	    PORT	 INT_BIT DATA_BIT
 19	    GPIO_6	    16	    0
 18	    GPIO_6	    17	    1
 14	    GPIO_6	    18	    2
@@ -31,13 +31,13 @@ PINS	PORT	 INT_BIT DATA_BIT
 23	    GPIO_6	    25	    7
 
 10 BIT pinmap: 
-PINS	PORT	 INT_BIT  DATA_BIT
+PINS	    PORT	 INT_BIT  DATA_BIT
 19	    GPIO_6	    16	    0
 18	    GPIO_6	    17	    1
-14  	GPIO_6	    18	    2
+14  	    GPIO_6	    18	    2
 15	    GPIO_6	    19	    3
 			
-17	    GPIO_6	    22  	4
+17	    GPIO_6	    22      4
 16	    GPIO_6	    23	    5
 22	    GPIO_6	    24	    6
 23	    GPIO_6	    25	    7
@@ -45,24 +45,24 @@ PINS	PORT	 INT_BIT  DATA_BIT
 21	    GPIO_6	    27	    9
 
 12 BIT pinmap:
-PINS	PORT	 INT_BIT  DATA_BIT
+PINS	    PORT	 INT_BIT  DATA_BIT
 19	    GPIO_6	    16	    0
-18	    GPIO_6  	17	    1
-14  	GPIO_6	    18	    2
+18	    GPIO_6  	    17	    1
+14  	    GPIO_6	    18	    2
 15	    GPIO_6	    19	    3
 			
-17	    GPIO_6  	22	    4
-16	    GPIO_6  	23	    5
-22	    GPIO_6  	24	    6
-23  	GPIO_6	    25	    7
-20  	GPIO_6	    26	    8
+17	    GPIO_6  	    22	    4
+16	    GPIO_6  	    23	    5
+22	    GPIO_6  	    24	    6
+23  	    GPIO_6	    25	    7
+20  	    GPIO_6	    26	    8
 21	    GPIO_6	    27	    9
 			
-1	    GPIO_6  	2	    10
+1	    GPIO_6  	    2	    10
 0	    GPIO_6	    3	    11
 
 16 BIT pinmap:
-PINS	PORT	 INT_BIT	DATA_BIT
+PINS	    PORT	 INT_BIT	DATA_BIT
 10	    GPIO_7	    0	        0
 12	    GPIO_7	    1	        1
 11	    GPIO_7	    2	        2
@@ -78,32 +78,32 @@ PINS	PORT	 INT_BIT	DATA_BIT
 1	    GPIO_6	    2	        10
 0	    GPIO_6	    3	        11
 			
-19  	GPIO_6	    16	        12
+19  	    GPIO_6	    16	        12
 18	    GPIO_6	    17	        13
 14	    GPIO_6	    18	        14
 15	    GPIO_6	    19	        15
 
 24 BIT pinmap:
-PINS	PORT	 INT_BIT	DATA_BIT
+PINS	    PORT	 INT_BIT	DATA_BIT
 10	    GPIO_7	    0	        0
 12	    GPIO_7	    1	        1
 11	    GPIO_7	    2	        2
 13	    GPIO_7	    3	        3
 			
 17	    GPIO_6	    22	        4
-16  	GPIO_6	    23	        5
+16  	    GPIO_6	    23	        5
 22	    GPIO_6	    24	        6
 23	    GPIO_6	    25	        7
 20	    GPIO_6	    26      	8
-21  	GPIO_6	    27	        9
+21  	    GPIO_6	    27	        9
 			
 1	    GPIO_6	    2	        10
 0	    GPIO_6	    3	        11
 			
-19  	GPIO_6	    16	        12
-18  	GPIO_6	    17	        13
-14  	GPIO_6  	18	        14
-15  	GPIO_6	    19	        15
+19  	    GPIO_6	    16	        12
+18  	    GPIO_6	    17	        13
+14  	    GPIO_6          18	        14
+15  	    GPIO_6	    19	        15
 			
 2	    GPIO_9	    4	        16
 3	    GPIO_9	    5	        17
@@ -118,7 +118,7 @@ PINS	PORT	 INT_BIT	DATA_BIT
 7	    GPIO_7	    17	        23
 
 
-Setting pins in the code:
+Setting pins :
 set_xbit(mode);
 x is no of bits and can be 8,10,12,16,24.
 mode can be INPUT, INPUT_PULLUP, INPUT_PULLDOWN, OUTPUT....
@@ -162,3 +162,4 @@ No_of_bits     Speed
     16          43ns
     24          70ns
 Once again Speed of 16-bit and 24-bit speed can be improved to 23ns and 43ns by using pins on the backside of the board(24,25,26,27 to be specific).
+*The speed is calculated by executing the instruction 1000 times and measuring the time taken It might not be accurate. I would like to see if anyone can probe the pins with oscilloscope and measure the speed,
