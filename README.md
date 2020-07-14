@@ -136,11 +136,12 @@ it returns the value of the data read on the pins as an unsigned integer of suit
 
 |No_of_bits|type_of_return_value|No_of_ports|Speed|
 |:--------:|:------------------:|:---------:|:---:|
-|    8     |     uint8_t        |     1     |14ns|
-|    10    |     uint16_t       |     1     |14ns|
-|    12    |     uint16_t       |     1     |14ns|
+|    8     |     uint8_t        |     1     |14ns |
+|    10    |     uint16_t       |     1     |14ns |
+|    12    |     uint16_t       |     1     |14ns |
 |    16    |     uint16_t       |     2     |26~27ns|
 |    24    |     uint32_t       |     3     | 40ns|
+
 you can see that no of ports affects the speed so using less no of ports is recommonded. 
 *16-bit and and 24-bit can be reduced to 14ns and 27ns by using pins on the backside of the board(24,25,26,27 to be specific).
 
@@ -164,11 +165,13 @@ Again no_of_ports affects the speed. Speed of 16-bit and 24-bit speed can be imp
 #### safe_write_xbit(data);
 This method is same as write but it doesn't affect other pins. 
 But it does it at the cost of the speed. 
- - No_of_bits     Speed
-   - 8           23ns
-   - 10          23ns
-   - 12          23ns
-   - 16          43ns
-   - 24          70ns
+ |No_of_bits|Speed|
+ |:--------:|:---:|
+ |    8     | 23ns|
+ |    10    | 23ns|
+ |    12    | 23ns|
+ |    16    | 43ns|
+ |    24    | 70ns|
+ 
 Once again Speed of 16-bit and 24-bit speed can be improved to 23ns and 43ns by using pins on the backside of the board(24,25,26,27 to be specific).
 *The speed is calculated by executing the instruction 1000 times and measuring the time taken It might not be accurate. I would like to see if anyone can probe the pins with oscilloscope and measure the speed,
