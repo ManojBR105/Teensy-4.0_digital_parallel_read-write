@@ -134,12 +134,13 @@ this functions sets the pin as input/output it uses the usual pinMode() function
 ### read_xbit();
 it returns the value of the data read on the pins as an unsigned integer of suitable size. Assign its value to a variable in the code.
 
-- No_of_bits       type_of_return_value        No_of_ports      Speed
-  - 8                    uint8_t                   1            14ns
-  - 10                   uint16_t                  1            14ns
-  - 12                   uint16_t                  1            14ns
-  - 16                   uint16_t                  2           26~27ns
-  - 24                   uint32_t                  3            40ns
+|No_of_bits|type_of_return_value|No_of_ports|Speed|
+|:--------:|:------------------:|:---------:|:---:|
+|    8     |     uint8_t        |     1     |14ns|
+|    10    |     uint16_t       |     1     |14ns|
+|    12    |     uint16_t       |     1     |14ns|
+|    16    |     uint16_t       |     2     |26~27ns|
+|    24    |     uint32_t       |     3     | 40ns|
 you can see that no of ports affects the speed so using less no of ports is recommonded. 
 *16-bit and and 24-bit can be reduced to 14ns and 27ns by using pins on the backside of the board(24,25,26,27 to be specific).
 
@@ -150,12 +151,14 @@ x is no of bits and can be 8,10,12,16,24.
 data is the parameter to be written on the data line.
 This mode is faster compared to safe_write() but this method might affect other pins on the port if not managed properly.
 
-- No_of_bits       parameter_type        No_of_ports      Speed         pins_might_get_affected
-  - 8               uint8_t                 1            3ns           0,1,20,21,24,25,26,27
-  - 10              uint16_t                1            3ns           0,1,24,25,26,27
-  - 12              uint16_t                1            3ns           24,25,26,27
-  - 16              uint16_t                2           6~7ns          24,25,26,27,6,7,8,9,32
-  - 24              uint32_t                3            10ns          24,25,26,27,29,32,33
+|No_of_bits|parameter_type|No_of_ports|Speed|pins_might_get_affected|
+|:--------:|:------------:|:---------:|:---:|:---------------------:|
+|    8     |   uint8_t    |     1     | 3ns | 0,1,20,21,24,25,26,27 |
+|    10    |   uint16_t   |     1     | 3ns | 0,1,24,25,26,27       |
+|    12    |   uint16_t   |     1     | 3ns | 24,25,26,27           |
+|    16    |   uint16_t   |     2     |6~7ns| 24,25,26,27,6,7,8,9,32|
+|    24    |   uint32_t   |     3     | 10ns| 24,25,26,27,29,32,33  |
+
 Again no_of_ports affects the speed. Speed of 16-bit and 24-bit speed can be improved to 3ns and 7ns by using pins on the backside of the board(24,25,26,27 to be specific).
 
 #### safe_write_xbit(data);
