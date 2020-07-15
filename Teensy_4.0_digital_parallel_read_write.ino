@@ -1,3 +1,8 @@
+/*
+*This Program uses port Manipulation to read/write data parallely to multiple pins simultaneously
+*checkout the readme file for more information
+*<----written by---MakerBR----->
+*/
 #define lsb0_3mask_8bit     0x0f             //                               0000 1111 in binary
 #define lsb4_7mask_8bit     0xf0             //                               1111 0000 in binary
 #define lsb4_9mask_16bit    0x03f0           //                     0000 0011 1111 0000 in binary
